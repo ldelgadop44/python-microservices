@@ -14,7 +14,7 @@ This repo contains python microservices for tests purpose
 * GET `/countries`
 
 ```bash
-  curl localhost:8000/countries
+  curl http://localhost:8000/countries
 ```
 
 ```bash
@@ -41,6 +41,12 @@ This repo contains python microservices for tests purpose
 ```
 
 * POST `/countries`
+
+```bash
+  curl -i http://localhost:8000/countries -X POST \
+  -H 'Content-Type: application/json' \
+  -d '{"name":"Germany", "capital": "Berlin", "area": 357022}'
+```
 
 ```bash
 HTTP/1.1 201 CREATED
